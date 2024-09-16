@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ShopAppP518.Data;
 
@@ -11,9 +12,11 @@ using ShopAppP518.Data;
 namespace ShopAppP518.Data.Migrations
 {
     [DbContext(typeof(ShopAppContext))]
-    partial class ShopAppContextModelSnapshot : ModelSnapshot
+    [Migration("20240916171453_Large")]
+    partial class Large
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

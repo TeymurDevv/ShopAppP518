@@ -1,6 +1,6 @@
-﻿    namespace ShopAppP518.Apps.AdminApp.Dtos.ProductDto
+﻿namespace ShopAppP518.Apps.AdminApp.Dtos.ProductDto
 {
-    public class ProductCreateDto
+    public class ProductUpdateDto
     {
         public string Name { get; set; }
         public decimal SalePrice { get; set; }
