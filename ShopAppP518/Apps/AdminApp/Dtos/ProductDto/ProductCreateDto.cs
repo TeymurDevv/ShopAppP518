@@ -1,10 +1,9 @@
-﻿namespace ShopAppP518.Entities
+﻿    namespace ShopAppP518.Apps.AdminApp.Dtos.ProductDto
 {
-    public class Product : BaseEntity
+    public class ProductCreateDto
     {
         public string Name { get; set; }
         public decimal SalePrice { get; set; }
         public decimal CostPrice { get; set; }
-        public bool IsDelete { get; set; }
     }
 }

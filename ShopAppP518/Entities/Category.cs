@@ -1,10 +1,9 @@
 ﻿namespace ShopAppP518.Entities
 {
-    public class Product : BaseEntity
+    public class Category : BaseEntity
     {
         public string Name { get; set; }
-        public decimal SalePrice { get; set; }
-        public decimal CostPrice { get; set; }
+        public string ImageUrl { get; set; }
         public bool IsDelete { get; set; }
     }
 }
