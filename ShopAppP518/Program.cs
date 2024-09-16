@@ -1,4 +1,7 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
+using ShopAppP518.Apps.AdminApp.Validators.ProductValidator;
 using ShopAppP518.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,6 +28,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
+builder.Services.AddFluentValidationAutoValidation()
+    .AddFluentValidationClientsideAdapters()
+    .AddValidatorsFromAssemblyContaining<ProductCreateValidator>();
+
 
 app.UseAuthorization();
 
